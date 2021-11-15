@@ -15,6 +15,10 @@ pipeline {
                 ansiColor('css') {
                      sh "ls -al"
                 }
+                ansiColor('xterm') {
+                         echo "TERM=${env.TERM}"
+                        // prints out TERM=xterm
+                    }
 
                 echo 'this will be rendered as-is'
                 // multiple ansiColor steps within one pipeline are also supported

@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn -B -Dstyle.color=always -DskipTests clean package'
+                sh 'mvn -B -Dstyle.color=always -Djansi.force=true -DskipTests  clean package'
             }
         }
         stage('Test') { 

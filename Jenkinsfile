@@ -8,6 +8,16 @@ pipeline {
     options {
         ansiColor('xterm')
     }
+    ansiColor('css') {
+         sh "ls -al"
+    }
+
+echo 'this will be rendered as-is'
+// multiple ansiColor steps within one pipeline are also supported
+
+    ansiColor('vga') {
+        echo '\033[42m\033[97mWhite letters, green background\033[0m'
+        }
     stages {
         stage('Build') {
             steps {

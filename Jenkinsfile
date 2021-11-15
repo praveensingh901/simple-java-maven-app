@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                ansiColor('xterm') {
+                ansiColor('gnome-terminal') {
                   echo '\033[42m\033[97mWhite letters, green background\033[0m'
                      sh 'mvn -B -Dstyle.color=always -Djansi.force=true -DskipTests  clean package'
                     }

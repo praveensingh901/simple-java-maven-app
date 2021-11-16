@@ -13,7 +13,7 @@ pipeline {
             steps {
                 ansiColor('gnome-terminal') {
                   echo '\033[42m\033[97mWhite letters, green background\033[0m'
-                     sh 'mvn -B -Dstyle.color=always -Djansi.force=true -DskipTests  clean package'
+                     sh 'mvn -Dstyle.color=always -Djansi.force=true -DskipTests  clean package'
                     }
 
             }
